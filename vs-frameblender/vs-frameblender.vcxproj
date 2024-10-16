@@ -83,11 +83,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)vapoursynth;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include;$(ProjectDir)opencl;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)vapoursynth;$(CUDA_PATH)\include;$(ProjectDir)opencl;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\$(Configuration.toLower())\$(Platform.toLower())\</OutDir>
     <IntDir>$(SolutionDir)build\$(Configuration.toLower())\$(Platform.toLower())\</IntDir>
     <TargetName>$(ProjectName)-x64</TargetName>
-    <LibraryPath>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(CUDA_PATH)\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
